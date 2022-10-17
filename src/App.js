@@ -1,19 +1,15 @@
 import React, { Component } from 'react'
-import axios from 'axios'
+import Item from './components/Item/Item'
+import List from './components/List/List'
+import Search from './components/Search/Search'
+import './App.css'
 
 export default class App extends Component {
-
-  getData = () => {
-    axios.get('??').then(
-      response => { console.log('success', response.data); },
-      error => { console.log('failed', error); }
-    )
-  }
   render() {
     return (
       <div>
-        <button onClick={this.getData}>Click me to get Data</button>
-
+        <Search />
+        <List />
       </div>
     )
   }
