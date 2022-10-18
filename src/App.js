@@ -1,17 +1,16 @@
 import React, { Component } from 'react'
-import Item from './components/Item/Item'
-import List from './components/List/List'
-import Search from './components/Search/Search'
+import Home from './components/Home/Home'
+import About from './components/About/About'
+
 import './App.css'
 
 export default class App extends Component {
   render() {
     return (
       <div>
-        <Search />
-        <List />
+        <Home />
+        <About />
       </div>
     )
   }
 }
- 

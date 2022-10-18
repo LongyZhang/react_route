@@ -1,2 +1,5 @@
 1: SPA concept
 The single page concept for this
+
+2： react dom
+basically the react project contains react-dom
