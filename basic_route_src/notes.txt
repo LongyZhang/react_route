@@ -12,6 +12,3 @@ define the navigation part and display part
 
 <Routers>
 <Route path="/home" element={<Home/>}>
-
-4: where do we store pages component?
-we prefer to store it under src folder of pages

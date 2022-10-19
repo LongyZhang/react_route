@@ -1,18 +1,22 @@
 import React, { Component } from 'react'
-import Home from './pages/Home/Home'
-import About from './pages/About/About'
+import Home from './components/Home/Home'
+import About from './components/About/About'
 import { Link, Route, Routes } from 'react-router-dom'
-import Header from './component/Header/Header'
+
 import './App.css'
 
 export default class App extends Component {
   render() {
     return (
       <div className='container'>
-        <Header a={{ name: 'longy', id: 1, location: 'adelaide' }} />
-        {/*  Header is normal component
-          Home and About is router component       
-        */}
+        <div className="row">
+          <div className="col">
+            <div className="page-header">
+              <h2>React Router Demo</h2>
+            </div>
+          </div>
+        </div>
+
         <div className="row">
           <div className="col-4">
             <div className="list-group">
@@ -34,7 +38,7 @@ export default class App extends Component {
                   */}
                 <Routes>
                   <Route path="/about" element={<About />} />
-                  <Route path="/home" element={<Home a={{ name: 'zhang', id: 999 }} />} />
+                  <Route path="/home" element={<Home />} />
                 </Routes>
 
               </div>
