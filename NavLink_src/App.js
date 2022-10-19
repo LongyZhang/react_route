@@ -3,8 +3,6 @@ import Home from './pages/Home/Home'
 import About from './pages/About/About'
 import { NavLink, Route, Routes } from 'react-router-dom'
 import Header from './component/Header/Header'
-import MyNavLink from './component/MyNavLink/MyNavLink'
-import Test from './component/Test/test'
 import './App.css'
 
 export default class App extends Component {
@@ -20,10 +18,8 @@ export default class App extends Component {
             <div className="list-group">
               {/* There is two types of router which are browerRouter and hashRouter */}
 
-
-              {/* <NavLink style={({ isActive }) => ({ background: isActive ? "green" : "pink" })} className='list-group-item' to="/home">Home</NavLink> */}
-              <MyNavLink to={"/about"} > about here </MyNavLink>
-              <MyNavLink to={"/home"} >Home here </MyNavLink>
+              <NavLink style={({ isActive }) => ({ background: isActive ? "green" : "pink" })} className='list-group-item ' to="/about">About</NavLink>
+              <NavLink style={({ isActive }) => ({ background: isActive ? "green" : "pink" })} className='list-group-item' to="/home">Home</NavLink>
 
               {/* <a href="./about.html" className='list-group-item'>about</a>
               <a href="./home.html" className='list-group-item active'>home</a> */}
@@ -37,11 +33,8 @@ export default class App extends Component {
                     dont forget to include browserRouter in outside of app.js
                   */}
                 <Routes>
-                  {/* the path relationship is one to one for component */}
                   <Route path="/about" element={<About />} />
-                  <Route path="/home" element={<Test />} />
-                  <Route path="/home" element={<Home />} />
-
+                  <Route path="/home" element={<Home a={{ name: 'zhang', id: 999 }} />} />
                 </Routes>
 
               </div>

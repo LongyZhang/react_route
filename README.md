@@ -32,3 +32,8 @@ we prefer to store it under src folder of pages
         route component:
         page folder 
     3: both can pass data through props
+
+6: Pack your NavLink by using normal component
+    1: using normal component to contain general class for navlink
+    2: using props to customize the navlink
+    3: using full version of navlink to customize your content
