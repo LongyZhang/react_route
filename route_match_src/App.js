@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Home from './pages/Home/Home'
 import About from './pages/About/About'
-import { NavLink, Route, Routes, Navigate } from 'react-router-dom'
+import { NavLink, Route, Routes } from 'react-router-dom'
 import Header from './component/Header/Header'
 import MyNavLink from './component/MyNavLink/MyNavLink'
 import Test from './component/Test/test'
@@ -25,7 +25,6 @@ export default class App extends Component {
               <MyNavLink to={"/about"} > about here </MyNavLink>
               <MyNavLink to={"/home"} >Home here </MyNavLink>
 
-
               {/* <a href="./about.html" className='list-group-item'>about</a>
               <a href="./home.html" className='list-group-item active'>home</a> */}
             </div>
@@ -39,11 +38,10 @@ export default class App extends Component {
                   */}
                 <Routes>
                   {/* the path relationship is one to one for component */}
-                  <Route path="/about/*" element={<About />} />
+                  <Route path="/about" element={<About />} />
                   {/* <Route path="/home" element={<Test />} /> */}
-                  <Route path="/home/*" element={<Home />} />
-                  <Route path='/' element={<Navigate to='/home' replace />} />
-                  {/* Navigate is meant to design default content for route */}
+                  <Route path="/home" element={<Home />} />
+
                 </Routes>
 
               </div>

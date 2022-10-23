@@ -39,9 +39,9 @@ export default class App extends Component {
                   */}
                 <Routes>
                   {/* the path relationship is one to one for component */}
-                  <Route path="/about/*" element={<About />} />
+                  <Route path="/about" element={<About />} />
                   {/* <Route path="/home" element={<Test />} /> */}
-                  <Route path="/home/*" element={<Home />} />
+                  <Route path="/home" element={<Home />} />
                   <Route path='/' element={<Navigate to='/home' replace />} />
                   {/* Navigate is meant to design default content for route */}
                 </Routes>
