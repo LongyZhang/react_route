@@ -21,7 +21,7 @@ export default class Item extends Component {
                 </ul>
                 <Routes>
                     <Route path='News' element={<News />}></Route>
-                    <Route path='Message' element={<Message />}></Route>
+                    <Route path='Message/*' element={<Message />}></Route>
                 </Routes>
                 {/* <News /> */}
                 {/* <Message /> */}

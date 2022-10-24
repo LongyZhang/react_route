@@ -47,3 +47,12 @@
     from another route 
     3: when we register route navlink, it is suggested to use home rather than /home
     4: more detail refers documentation
+
+8: Pass parameters between routes
+    1: using `Content/${obj.id}/${obj.title}` to register the url and pass value to certain addresss
+    2: using Nest route to define and receive value from link
+    <Route path='Content' element={<Content />}>
+        <Route path=':id/:title' element={<Content />}></Route>
+    </Route>
+    3: using useParams() to receive value from element component
+     
