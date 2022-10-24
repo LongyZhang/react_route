@@ -34,11 +34,15 @@ we prefer to store it under src folder of pages
     3: both can pass data through props
 
 6: Pack your NavLink by using normal component
+
     1: using normal component to contain general class for navlink
     2: using props to customize the navlink
     3: using full version of navlink to customize your content
 
 7: Nest Route Component
+
     1: Using Route component to contain another component
     2: The nest route component can change content of component 
-    from another route
+    from another route 
+    3: when we register route navlink, it is suggested to use home rather than /home
+    4: more detail refers documentation
