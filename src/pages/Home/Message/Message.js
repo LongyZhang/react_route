@@ -11,6 +11,17 @@ export default class Message extends Component {
             { id: '03', title: 'Message003' }
         ]
     }
+    f1 = (id, event) => {
+        console.log(event.target, id);
+
+    }
+
+    f1 = (id) => {
+        return (event) => {
+            console.log(event.target, id);
+        }
+    }
+
     render() {
         const { MesArr } = this.state
         return (
@@ -23,7 +34,8 @@ export default class Message extends Component {
                                     {/* in the to url to transfer data */}
                                     {/* pass params to route*/}
                                     <NavLink to={`Content/${obj.id}/${obj.title}`}>{obj.title} </NavLink>
-
+                                    &nbsp; <button>Push</button>
+                                    &nbsp; <button onClick={this.f1(obj.id)}>Replace</button>
                                     {/* Pass state params to route */}
                                     {/* <Link to='Content' state={{ id: obj.id, title: obj.title }}> </Link> */}
                                 </li>

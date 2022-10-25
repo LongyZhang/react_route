@@ -68,4 +68,30 @@
         location=useLocation()
         const {id,name}=location.state
     
-     
+10: Difference between pass parameter on function
+    1: 
+        <button onClick={()=>this.f1(id)}/>
+        f1=(id)=>{   
+                console.log(id)
+        }
+
+        OnClick wants to return a function rather than value, in This case Onclick returns a function this.f1(id)
+
+        if we dont use ()=>, 
+        e.g. <button onClick={this.f1}>
+                f1=(id)=>{   
+                        console.log(id)
+                }
+            It will return a value rather than function
+
+    2:  
+        <button onClick={this.f1(id)}>
+        f1=(id)=>{
+            return(event)=>{
+                console.log(id,event.target)
+            }
+        }
+
+        Onclick returns va
+
+        
