@@ -55,4 +55,17 @@
         <Route path=':id/:title' element={<Content />}></Route>
     </Route>
     3: using useParams() to receive value from element component
+
+9: Pass State parameters between routes
+    1： Good thing: URL does not show any infomation
+    2:  Simple
+    3:  Setup Link 
+        <Link to='xxx' state={{id:1,name:'xx'}}>
+    4:  Display item
+        <Routes>
+            <Route path='', element={<Component/>}>
+    5:  Receive State
+        location=useLocation()
+        const {id,name}=location.state
+    
      

@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import Content from './Content/Content'
-
 import { NavLink, Route, Routes, Navigate, Link } from 'react-router-dom'
 
 export default class Message extends Component {
@@ -22,10 +21,10 @@ export default class Message extends Component {
                                 <li key={obj.id}>
                                     {/* in the to url to transfer data */}
                                     {/* pass params to route*/}
-                                    <NavLink to={`Content/${obj.id}/${obj.title}`}>{obj.title} </NavLink>
+                                    {/* <NavLink to={`Content/${obj.id}/${obj.title}`}>{obj.title} </NavLink> */}
 
                                     {/* Pass state params to route */}
-                                    {/* <Link to='Content' state={{ id: obj.id, title: obj.title }}> </Link> */}
+                                    <Link to='Content' state={{ id: obj.id, title: obj.title }}>{obj.title} </Link>
                                 </li>
                             )
                         })
@@ -35,11 +34,11 @@ export default class Message extends Component {
                 <Routes>
 
                     {/* receive parmas  */}
-                    <Route path='Content' element={<Content />}>
+                    {/* <Route path='Content' element={<Content />}>
                         <Route path=':id/:title' element={<Content />}></Route>
-                    </Route>
+                    </Route> */}
 
-                    {/* <Route path='Content' element={<Content />}></Route> */}
+                    <Route path='Content' element={<Content />}></Route>
 
 
                 </Routes>
