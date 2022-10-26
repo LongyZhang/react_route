@@ -16,11 +16,11 @@ export default class Message extends Component {
 
     }
 
-    f1 = (id) => {
-        return (event) => {
-            console.log(event.target, id);
-        }
-    }
+    // f1 = (id) => {
+    //     return (event) => {
+    //         console.log(event.target, id);
+    //     }
+    // }
 
     render() {
         const { MesArr } = this.state
@@ -35,7 +35,7 @@ export default class Message extends Component {
                                     {/* pass params to route*/}
                                     <NavLink to={`Content/${obj.id}/${obj.title}`}>{obj.title} </NavLink>
                                     &nbsp; <button>Push</button>
-                                    &nbsp; <button onClick={this.f1(obj.id)}>Replace</button>
+                                    &nbsp; <button onClick={(event) => this.f1(obj.id, event)}>Replace</button>
                                     {/* Pass state params to route */}
                                     {/* <Link to='Content' state={{ id: obj.id, title: obj.title }}> </Link> */}
                                 </li>
