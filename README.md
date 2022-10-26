@@ -94,4 +94,16 @@
 
         Onclick returns va
 
+11: What is Redux?
+
+    1: Redux is lib which manage the state
+    2: It is popular in React
+    3: It can manage state between multiple components
+
+12: When do we need Redux?
+
+    1: some of component's state needs to be used by another component , it makes public
+    2: one component can change another component's state,it makes communication
+     
+
         
